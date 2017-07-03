@@ -8,6 +8,7 @@ ENV RCON_HEALTH_COMMAND ""
 ENV RCON_HEALTH_REGEXP ""
 
 ADD SourceRcon.py /rcon/SourceRcon.py
+ADD healthcheck.py /rcon/healthcheck.py
 ADD healthcheck.sh /rcon/healthcheck.sh
 
 HEALTHCHECK --interval=1m --retries=5 CMD /rcon/healthcheck.sh
