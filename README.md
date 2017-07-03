@@ -2,7 +2,9 @@
 
 Barebone steamcmd in Ubuntu with rcon healthcheck
 
-# Envs
+# Usage
+
+## Envs
 
 See [xcq1/steamcmd](https://hub.docker.com/r/xcq1/steamcmd/) plus
 
