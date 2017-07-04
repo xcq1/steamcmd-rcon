@@ -7,6 +7,10 @@ ENV RCON_PASSWORD ""
 ENV RCON_HEALTH_COMMAND ""
 ENV RCON_HEALTH_REGEXP ""
 
+RUN apt update && \
+	apt install -y python && \
+	apt clean
+
 ADD SourceRcon.py /rcon/SourceRcon.py
 ADD healthcheck.py /rcon/healthcheck.py
 ADD healthcheck.sh /rcon/healthcheck.sh
