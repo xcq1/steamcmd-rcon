@@ -6,7 +6,7 @@ import SourceRcon as rcon
 challenge = os.environ.get('RCON_HEALTH_COMMAND')
 check = os.environ.get('RCON_HEALTH_REGEXP')
 
-rcon = SourceRcon.SourceRcon(os.environ.get('RCON_HOST'), os.environ.get('RCON_PORT'), os.environ.get('RCON_PASS'))
+rcon = SourceRcon.SourceRcon(os.environ.get('RCON_HOST'), os.environ.get('RCON_PORT'), os.environ.get('RCON_PASSWORD'))
 response = rcon.rcon(challenge)
 rcon.disconnect()
 
