@@ -1,6 +1,7 @@
 import sys
 import os
 import re
+sys.path.append(os.path.abspath("/rcon"))
 import SourceRcon as rcon
 
 challenge = os.environ.get('RCON_HEALTH_COMMAND')

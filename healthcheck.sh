@@ -5,4 +5,4 @@ if [ -z "$RCON_HEALTH_COMMAND" ]; then
 	exit 1
 fi
 
-python healthcheck.py
+python /rcon/healthcheck.py
