@@ -7,12 +7,15 @@ ENV RCON_PASSWORD ""
 ENV RCON_HEALTH_COMMAND ""
 ENV RCON_HEALTH_REGEXP ""
 
+USER root
 RUN apt update && \
 	apt install -y python && \
 	apt clean
 
-ADD SourceRcon.py /rcon/SourceRcon.py
-ADD healthcheck.py /rcon/healthcheck.py
-ADD healthcheck.sh /rcon/healthcheck.sh
+ADD SourceRcon.py /home/steam/rcon/SourceRcon.py
+ADD healthcheck.py /home/steam/rcon/healthcheck.py
+ADD healthcheck.sh /home/steam/rcon/healthcheck.sh
 
-HEALTHCHECK --interval=1m --retries=5 CMD /rcon/healthcheck.sh
+HEALTHCHECK --interval=1m --retries=5 CMD /home/steam/rcon/healthcheck.sh
+
+USER steam
